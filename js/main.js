@@ -17,7 +17,7 @@ if(localStorage.getItem('websites') != null){
 
 function addWebsite(){
 
-    if(validateWebsiteName && validateWebsiteurl){
+    if(validateWebsiteName() && validateWebsiteurl()){
         var website = {
             name : websiteNameInput.value,
             url: websiteUrlInput.value
