@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+    <div class="main py-5">
+        <div class="container">
+            <h1 class="text-center">Favorite Websites</h1>
+            <div class="my-3">
+                <label for="websiteNameInput">Website Name</label>
+                <input type="text" id="websiteNameInput" class="form-control" placeholder="Website Name" oninput="validateWebsiteName()">
+            </div>
+
+            <div class="my-3">
+                <label for="websiteUrlInput">Website Url</label>
+                <input type="text" id="websiteUrlInput" class="form-control" placeholder="Website Url" oninput="validateWebsiteurl()">
+            </div>
+
+            <div class="text-center">
+                <button id="btnSubmit" class="btn btn-info" onclick="addWebsite()">Submit</button>
+            </div>
+            <div class="text-center">
+                <button id="btnEdit" class="btn btn-primary d-none" onclick="updateWebsite()">Update</button>
+            </div>
+           
+
+        </div>
+
+        <div class="input-group my-3 w-50 mx-auto">
+            <span class="input-group-text" id="basic-addon1">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+            <input type="text" oninput="search()" id="searchInput" class="form-control" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+
+
+        <table class="table container text-center">
+            <thead>
+                <tr>
+                    <th>Website Name</th>
+                    <th>Website Url</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                    <th>Visit</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+        
+             
+                
+            </tbody>
+        </table>
+    </div>
+    
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
